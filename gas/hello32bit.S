@@ -15,6 +15,6 @@ _start:
 	mov 	$4, %eax 	# fill arguments (opcode for syscall write = 4)
 	int 	$0x80
 
-	mov 	$0, %ebx
-	mov 	$1, %eax
+	mov 	$0, %ebx 	# 0 status of exit. (no errors)
+	mov 	$1, %eax 	# call exit syscall
 	int 	$0x80
